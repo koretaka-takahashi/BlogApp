@@ -10,6 +10,7 @@ module BlogApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    config.i18n.default_locale = :ja 
 
     initializer(:remove_action_mailbox_and_activestorage_routes, after: :add_routing_paths) { |app|
       app.routes_reloader.paths.delete_if {|path| path =~ /activestorage/}

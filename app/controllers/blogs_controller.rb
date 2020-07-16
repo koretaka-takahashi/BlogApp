@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   
   def index
@@ -10,12 +11,12 @@ class BlogsController < ApplicationController
   end  
 
   def confirm
-    @blog = Blog.new(blog_params)
+    @blog = current_user.blogs.build(blog_params)
     render :new if @blog.invalid?
   end
 
   def create
-    @blog = Blog.new(blog_params)
+    @blog = current_user.blogs.build(blog_params)
     if params[:back]
       render :new
     else
@@ -53,7 +54,7 @@ class BlogsController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:title, :content)
+    params.require(:blog).permit(:title, :content, :user_id)
   end
 end
 
