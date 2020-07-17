@@ -1,0 +1,11 @@
+<h1><%= "#{@user.name}さんのブログ一覧"%></h1>
+
+<% @user.blogs.each do |blog| %>
+  <p><%= blog.created_at %></p>
+  <p><%= blog.title %></p>
+  <p><%= simple_format blog.content %></p>
+<% end %>
+
+<p>
+  <%= link_to "トップページへ", blogs_path %>
+</p>

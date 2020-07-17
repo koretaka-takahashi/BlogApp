@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'users/show'（rails g controllerでできたやつ。すでに下にルーティングあったので）
   devise_for :users
   root "blogs#index"
   resources :users, only: [:show]
