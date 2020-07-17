@@ -2,8 +2,7 @@
 
 <% @user.blogs.each do |blog| %>
   <p><%= blog.created_at.strftime("%F") %></p>
-  <p><%= blog.title %></p>
-  <p><%= simple_format blog.content %></p>
+  <p><%= link_to blog.title, blog_path(blog) %></p>
 <% end %>
 
 <p>
