@@ -32,22 +32,22 @@ https://drive.google.com/file/d/14BRH_cK9NS-81h5X046tZCobJDWjzGmJ/view?usp=shari
 
 
 ## 使用予定Gem
-Device
-CarrierWave
-mini_magick
-Bootstrap　
-jquery-rails　
-pry-rails　
-better_errors　
-binding_of_caller　
-ransack　
-rails_autolink　
-faker　
-rubocop
-rspec-rails　
-spring-commands-rspec　
-capybara　
-launchy　
-factory_bot_rails　
-webdrivers　
-counter_culture　
+Device  
+CarrierWave  
+mini_magick  
+Bootstrap  
+jquery-rails  
+pry-rails  
+better_errors  
+binding_of_caller  
+ransack  
+rails_autolink  
+faker  
+rubocop  
+rspec-rails  
+spring-commands-rspec  
+capybara  
+launchy  
+factory_bot_rails  
+webdrivers  
+counter_culture  
