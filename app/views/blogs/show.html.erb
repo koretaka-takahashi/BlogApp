@@ -1,6 +1,7 @@
 <h1><%= @blog.title %></h1>
 <p><%= @blog.created_at.strftime("%F") %></p>
 <p><%= simple_format @blog.content  %></p>
+<p><%= image_tag @blog.image.url %></p>
 
 <p>
   <%= link_to "トップページへ", blogs_path %>

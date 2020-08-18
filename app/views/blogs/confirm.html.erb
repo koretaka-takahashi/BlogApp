@@ -6,6 +6,8 @@
   <div>
     <p>タイトル：<%= @blog.title %></p>
     <p>本文：<%= @blog.content %></p>
+    <p><%= image_tag(@blog.image.url) if @blog.image && @blog.image.url %></p>
+    <p><%= form.hidden_field :image_cache %></p>
   </div>
   <%= form.submit "この内容で作成する" %>
   <%= form.submit "戻る", name: "back" %>

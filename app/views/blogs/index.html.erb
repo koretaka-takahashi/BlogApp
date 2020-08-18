@@ -5,8 +5,8 @@
     <tr>
       <td><%= blog.title %></td>
       <td><%= blog.content %></td>
+      <td><%= link_to "見る", blog_path(blog) %></td>
       <% if current_user && blog.user == current_user %>
-        <td><%= link_to "見る", blog_path(blog) %></td>
         <td><%= link_to "編集", edit_blog_path(blog) %></td>
         <td><%= link_to "削除", blog_path(blog), method: :delete, data: {confirm: "タイトル「#{blog.title}」の記事を削除してよろしいですか？"} %></td>
       <% end %>

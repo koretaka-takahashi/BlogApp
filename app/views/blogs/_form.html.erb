@@ -18,6 +18,15 @@
       <td><%= form.label "本文" %></td>
       <td><%= form.text_area :content %></td>
     </tr>
+    <tr class="blog-image">
+      <td><%= form.label "画像" %></td>
+      <td>
+        <%= image_tag(@blog.image.url) if @blog.image && @blog.image.url %>
+        <%= form.file_field :image %>
+      </td>
+      <%# <td></td> %>
+      <td><%= form.hidden_field :image_cache %></td>
+    </tr>
     <tr>
       <td><%= form.submit "作成" %></td>
     </tr>  
